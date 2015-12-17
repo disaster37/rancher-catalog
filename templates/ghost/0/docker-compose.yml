@@ -1,0 +1,8 @@
+jenkins-primary:
+  image: "quay.io/webcenter/rancher-glusterfs-server:latest"
+  labels:
+    io.rancher.container.hostname_override: container_name
+  cap_add:
+  - SYS_ADMIN
+  environment:
+    GLUSTER_VOLUMES: dbvol,appvol

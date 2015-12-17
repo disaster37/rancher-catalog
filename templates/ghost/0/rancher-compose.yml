@@ -1,0 +1,7 @@
+.catalog:
+  name: Ghost
+  version: 0.7.1
+  description: |
+    Ghost blogging plateform
+  uuid: ghost-blog-0
+  scale: 2
