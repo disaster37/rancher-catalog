@@ -1,4 +1,4 @@
-jenkins-primary:
+ghost:
   image: "quay.io/webcenter/rancher-glusterfs-server:latest"
   labels:
     io.rancher.container.hostname_override: container_name
