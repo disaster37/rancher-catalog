@@ -1,4 +1,4 @@
-ghost:
+glusterfs:
   image: "quay.io/webcenter/rancher-glusterfs-server:latest"
   labels:
     io.rancher.container.hostname_override: container_name
@@ -6,3 +6,18 @@ ghost:
   - SYS_ADMIN
   environment:
     GLUSTER_VOLUMES: dbvol,appvol
+
+postgresql:
+  image: "quay.io/webcenter/rancher-postgresql:latest"
+  labels:
+    io.rancher.container.hostname_override: container_name
+  environment:
+    USER: ${DB_USER}
+    PASS: ${DB_PASS}
+    DB: ${DB_NAME}
+  cap_add:
+  - SYS_ADMIN
+  devices:
+  - "/dev/fuse:/dev/fuse"
+  links:
+  - glusterfs:storage

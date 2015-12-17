@@ -4,5 +4,26 @@
   description: |
     Ghost blogging plateform
   uuid: ghost-blog-0
-ghost:
+  questions:
+    - variable: "DB_NAME"
+      description: "Database name"
+      label: "DB Name"
+      required: true
+      default: "ghost"
+      type: "string"
+    - variable: "DB_USER"
+      description: "Database user"
+      label: "DB User"
+      required: true
+      default: "ghost"
+      type: "string"
+    - variable: "DB_PASS"
+      description: "Database password"
+      label: "DB Password"
+      required: true
+      default: ""
+      type: "string"
+glusterfs:
   scale: 2
+postgresql:
+  scale: 1
