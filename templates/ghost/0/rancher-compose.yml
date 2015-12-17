@@ -4,4 +4,5 @@
   description: |
     Ghost blogging plateform
   uuid: ghost-blog-0
+ghost:
   scale: 2
