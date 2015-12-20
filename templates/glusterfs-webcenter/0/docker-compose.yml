@@ -15,7 +15,9 @@ glusterfs-manager:
     - glusterfs-data
   labels:
     io.rancher.container.hostname_override: container_name
-  command: /app/init.py
+  command: /bin/bash
+  tty: true
+  stdin_open: true
 glusterfs-data:
   image: quay.io/webcenter/rancher-glusterfs-server:test
   command: /bin/true
