@@ -1,7 +1,7 @@
 .catalog:
   name: "GlusterFS"
   version: "3.7.5"
-  description: "Gluster FS (3x) replicated volume"
+  description: "Gluster FS (2x) replicated volume"
   uuid: glusterfs-webcenter-0
   questions:
     - variable: "VOLUME_NAME"
@@ -11,6 +11,6 @@
       default: "my_vol"
       type: "string"
 glusterfs-server:
-  scale: 3
+  scale: 2
   metadata:
     volume_name: "${VOLUME_NAME}"
