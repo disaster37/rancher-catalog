@@ -8,6 +8,8 @@ glusterfs-server:
     io.rancher.container.hostname_override: container_name
     io.rancher.sidekicks: glusterfs-data
   command: /app/run
+  tty: true
+  stdin_open: true
 glusterfs-data:
   image: quay.io/webcenter/rancher-glusterfs-server:test
   command: /bin/true
