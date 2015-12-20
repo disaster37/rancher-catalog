@@ -10,6 +10,9 @@ glusterfs-server:
   command: /app/run
   tty: true
   stdin_open: true
+  environment:
+    GLUSTER_VOLUMES: ${VOLUME_NAME}
+
 glusterfs-data:
   image: quay.io/webcenter/rancher-glusterfs-server:test
   command: /bin/true
