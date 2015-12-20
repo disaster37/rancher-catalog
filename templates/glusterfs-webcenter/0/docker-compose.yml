@@ -7,6 +7,7 @@ glusterfs-server:
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.sidekicks: glusterfs-data
+  command: /app/run
 glusterfs-data:
   image: quay.io/webcenter/rancher-glusterfs-server:test
   command: /bin/true
