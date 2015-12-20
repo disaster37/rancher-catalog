@@ -1,0 +1,5 @@
+name: Gluster FS - Webcenter
+description: |
+  Replicated Gluster Volume
+version: 3.7.5
+category: Storage
